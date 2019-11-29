@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 1</title>
+</head>
+<body>
+    <h1>Exercice 1</h1>
+    <div id="app"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="lib/form-jquery.js"></script>
+<script>
+    // Run the Plugin
+    $(document).ready(function() {
+        var myForm = $('#app').myForm({
+            css: {
+                margin: 10,
+                padding: 10,
+                fontSize: 15,
+                borderRadius: 5,
+                border: '1px solid'
+            },
+            buttonCss: {
+                margin: 10,
+                border: 'none',
+                padding: 10,
+                textAlign: 'center',
+                textDecoration: 'none',
+                display: 'inline-block',
+                fontSize: 16
+            },
+            errorCss: {
+                margin: 10,
+                padding: 10,
+                fontSize: 15,
+                color: '#ff0000',
+            },
+            form: [{
+                type: 'input',
+                required: true,
+                options: {
+                    placeholder: 'Nom',
+                    validRegex: '[a-zA-Z0-9]{3,}',
+                    error:  'Champ invalide'
+                }
+            }, {
+                type: 'input',
+                required: true,
+                options: {
+                    placeholder: 'Prenom',
+                    validRegex: '[a-zA-Z0-9]{3,}',
+                    error:  'Champ invalide'
+                }
+            }]
+        });
+    });
+</script>
+</body>
+</html>
