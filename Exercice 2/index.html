@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 2</title>
+</head>
+<body>
+<h1>Exercice 2</h1>
+<div id="app"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="lib/search-engine.js"></script>
+<script>
+  // Run the Plugin
+  $(document).ready(function() {
+    var searchEngine = $('#app').searchEngine({
+      buttonCss: {
+        height: '32px',
+        padding: '5px',
+        backgroundColor: '#f5250e',
+        borderRadius: '4px',
+        width: '20%',
+        color: '#FFFFFF'
+      },
+      inputCss: {
+        fontSize: '12px',
+        padding: '10px',
+        borderRadius: '4px',
+        border: '1px solid #c8c8c8',
+        width: '50%',
+        margin: '5px',
+        placeholder: 'Rechercher'
+      },pokemons: [{
+        id: 1,
+        name: 'Bulbizarre',
+        surname: 'Kanto',
+        weight: '6,9 kg',
+        type:'Grass',
+        image: 'https://pokeres.bastionbot.org/images/pokemon/1.png',
+        stats: {
+          sp: 50,
+          vi: 70,
+          att: 25,
+          def: 20
+        }
+      },{
+        id: 7,
+        name: 'Carapuce',
+        surname: 'Kanto',
+        weight: '9,0 kg',
+        type:'Water',
+        image: 'https://pokeres.bastionbot.org/images/pokemon/7.png',
+        stats: {
+          sp: 60,
+          vi: 50,
+          att: 30,
+          def: 15
+        }
+      },{
+        id: 4,
+        name: 'Salamèche',
+        surname: 'Kanto',
+        weight: '8,5 kg',
+        type:'Fire',
+        image: 'https://pokeres.bastionbot.org/images/pokemon/4.png',
+        stats: {
+          sp: 60,
+          vi: 50,
+          att: 30,
+          def: 15
+        }
+      }]
+    });
+  });
+</script>
+</body>
+</html>
